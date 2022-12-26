@@ -13,8 +13,7 @@ At first, I highly recomend using PyCharm.
 
 TRAIN:
 You can create your own dataset and than train the model, or run with the dataset provided.
-To do so, you just need to enter the scripts folder "gender reco", and run "python train.py dir/to/train dir/to/test",
-you can change either epochs values on the script.
+To do so, you just need to enter the scripts folder "gender reco", and run "python train.py epochs_value dir/to/train dir/to/test".
 
 PREDICT:
 After training the model, you can make some predicts with your own photos, you just need to enter the scripts

@@ -14,6 +14,7 @@ def train_step(model: torch.nn.Module,
 
     model.train()
     for X, y in tqdm(loaded_train, ascii="123456789$"):
+        X = X.to(device)
         y = y.to(device)
 
         y_preds = model(X).squeeze(1)
@@ -42,6 +43,7 @@ def test_step(model: torch.nn.Module,
     model.eval()
     with torch.inference_mode():
         for X, y in tqdm(loaded_test, ascii="123456789$"):
+            X = X.to(device)
             y = y.to(device)
 
             y_preds = model(X).squeeze(1)

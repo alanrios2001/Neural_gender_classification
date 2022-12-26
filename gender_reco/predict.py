@@ -1,8 +1,6 @@
 import torch
 from torchvision import transforms
 from PIL import Image
-
-import load_data
 from model_builder import GenderModel
 import typer
 import json
@@ -22,7 +20,7 @@ img_transform = transforms.Compose([
 
 @app.command()
 def predict(model_dir: str, img_path: str):
-    model_path = model_dir + "modelo.pth"
+    model_path = model_dir + "model.pth"
     with open(model_dir+"metrics.json") as file:
         metrics = json.load(file)
 
